@@ -1,31 +1,83 @@
-# Homework-12
- Employee Management System
-
-The purpose of this application is to allow users to dynamically update, and manage their business. It utilizes the power of the mysql node module to use javascript to update our mySQL database and view our insertions using console.table.
-
-# Installation
-Through Github create a clone of the repository.
-Once cloned to your local computer, in the terminal, run npm install.
-Load the seed.sql and the schema.sql into MySQLWorkbench.
-Once the packages have been installed and MySQLWorkbench is running, run node server.js in the terminal. Prompts should appear automatically after.
-# Functionality
-Users are prompted for their desired action which can be:
-1.View All Employees
-2.Add Employee
-3.Update Employee Role
 
 
-All employee class attributes are handled in the server and, depending on which role is chosen, a salary, manager, and department are assigned
-# Screenshots
-  connection
-<img src="assets/images/node.png">
-  view all employees
-   <img src="assets/images/node2.png">
-   add employee
-    <img src="assets/images/node3.png">
-    view again
-     <img src="assets/images/node4.png">
-# Requirments
-This application utilizes several node modules. Run the following npm install accordingly
+# Template Engine - Employee Summary
 
-npm install mysql inquirer console-table
+A command line application that can be used to manage employee powered by MySQL database, Node.js with  inquirer.
+
+This command-line application can do the followings:
+
+  * Add departments, roles, employees
+
+  * View departments, roles, employees
+
+  * Update employee roles  
+
+  * View employees by manager
+
+  * Delete departments, roles, and employees
+
+  * View the total utilized budget of a `department` -- ie the combined salaries of all employees in that department
+  * View the total utilized budget of a `manager` -- ie the combined salaries of all employees in that department
+
+
+## Usage demo utilized budget
+
+![Usage demo](./assets/demobu.gif)
+
+## Usage demo View
+
+![Usage demo](./assets/demo.gif)
+
+## Usage demo add
+
+![Usage demo](./assets/demo1.gif)
+
+## Table of Contents
+
+
+
+## Description
+
+The Employee Recording Program helps someone in an administrative position to easily log new employees, view existing employees, and update them as well
+
+## Features
+
+- When you run the program, in the command line interface you have 10 options to modify the SQL table: Add, View, and Delete for tables the tables named role, department, and employees; also, there is an option to update rolls.
+- When Add is selected the user will be asked what role, department, or name they would like to add. If the user chose View for whichever table, the console will bring back an organized listing of the table. If Delete is selected the user will be prompted enter the name of the employee to be deleted.
+- When update role is selected the user will be asked for the role to modified. Rerunning SELECT * FROM (table) will display the modified table depending on which option was previously selected. 
+
+## Getting-Started
+
+The application will be invoked with the following command post database/sql is eatablished: 
+
+```
+node app.js.
+npm i
+
+```
+
+## DB Structure:
+
+* **department**:
+
+  * **id** - INT PRIMARY KEY
+  * **name** - VARCHAR(30) to hold department name
+
+* **role**:
+
+  * **id** - INT PRIMARY KEY
+  * **title** -  VARCHAR(30) to hold role title
+  * **salary** -  DECIMAL to hold role salary
+  * **department_id** -  INT to hold reference to department role belongs to
+
+* **employee**:
+
+  * **id** - INT PRIMARY KEY
+  * **first_name** - VARCHAR(30) to hold employee first name
+  * **last_name** - VARCHAR(30) to hold employee last name
+  * **role_id** - INT to hold reference to role employee has
+  * **manager_id** - INT to hold reference to another employee that manager of the current employee. This field may be null if the employee has no manager
+
+  ![Database Schema](assets/schema.png)
+
+

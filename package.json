@@ -1,15 +1,13 @@
 {
-  "name": "homework-12",
+  "name": "test",
   "version": "1.0.0",
-  "description": "Employee Management System",
-  "main": "app.js",
-  "directories": {
-    "lib": "lib"
-  },
+  "description": "A command line application that can be used to manage employee powered by MySQL database, Node.js with  inquirer.",
+  "main": "index.js",
   "dependencies": {
-    "console.table": "^0.10.0",
-    "inquirer": "^7.0.3",
-    "mysql": "^2.17.1"
+    "cfonts": "^2.4.8",
+    "console-table-printer": "^1.1.52",
+    "inquirer": "^7.0.4",
+    "mysql": "^2.18.1"
   },
   "devDependencies": {},
   "scripts": {
@@ -17,13 +15,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Ana199816/homework-12.git"
+    "url": "git+https://github.com/Amitabh-K/Test.git"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Ana199816/homework-12/issues"
+    "url": "https://github.com/Amitabh-K/Test/issues"
   },
-  "homepage": "https://github.com/Ana199816/homework-12/blob/master/README.md"
+  "homepage": "https://github.com/Amitabh-K/Test#readme"
 }
